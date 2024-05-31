@@ -1,0 +1,54 @@
+// Base button style
+button {
+    cursor: pointer;
+    @include flex;
+    padding: 12px 24px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.7px;
+    border-radius: 40px;
+    border: 3px solid transparent;
+
+    @media (max-width:768px) {
+        font-size: 16px;
+        font-weight: 500;
+        padding: 8px 16px;
+        line-height: 1.5;
+        border: 2px solid transparent;
+    }
+
+    @media (max-width:400px) {
+        font-size: 14px;
+        font-weight: 500;
+        padding: 6px 12px;
+        line-height: 1.5;
+        border: 2px solid transparent;
+    }
+}
+
+// Modifier for button with solid background
+button.solid {
+    background-color: var(--theme-gray-800-background);
+    color: var(--theme-white-text);
+}
+
+button.solidRed {
+    background-color: var(--theme-danger-background);
+    color: var(--theme-white-text);
+}
+
+// Modifier for button with border
+button.border {
+    background-color: transparent;
+    border: 3px solid var(--theme-gray-800-background);
+    color: var(--theme-gray-800-text);
+
+    @media (max-width:768px) {
+        border: 2px solid var(--theme-gray-800-background);
+    }
+
+    @media (max-width:400px) {
+        border: 1px solid var(--theme-gray-800-background);
+    }
+}

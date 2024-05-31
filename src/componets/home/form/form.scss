@@ -1,0 +1,59 @@
+@import '../../../styles/index.scss';
+
+
+.form-main {
+    @include flex;
+    height: 100vh;
+    background-color: var(--theme-black-background);
+
+    .container {
+
+        form {
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            @include flex-column;
+            gap: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid var(--theme-warning-border);
+            transition: .3s all ease-in-out;
+
+
+            &:hover {
+                transition: .3s all ease-in-out;
+                box-shadow: 0 0 20px var(--theme-warning-border);
+            }
+
+            .heading {
+
+                h1 {
+                    font-size: 40px;
+                    font-weight: 600;
+                    color: var(--theme-white-text);
+                }
+            }
+
+            .form-group {
+                @include flex-column;
+                gap: 10px;
+
+                label {
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: var(--theme-white-text);
+                }
+
+                input {
+                    padding: 10px;
+                    border-radius: 5px;
+                    outline: none;
+                    border: none;
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: var(--theme-black-text);
+                }
+            }
+        }
+    }
+}

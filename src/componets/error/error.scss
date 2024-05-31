@@ -1,0 +1,36 @@
+@import '../../styles/index.scss';
+
+.error {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .content {
+        @include flex-column;
+        gap: 20px;
+
+        h3 {
+            font-size: 100px;
+            font-weight: 300;
+            color: var(--theme-red-text);
+        }
+
+        p {
+            font-size: 30px;
+            font-weight: 400;
+            color: var(--theme-gray-900-text);
+        }
+
+        button {
+            margin-top: 20px;
+
+            .icon {
+                margin-left: 10px;
+            }
+        }
+    }
+}
